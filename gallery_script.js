@@ -17,7 +17,14 @@ function updateImage() {
 updateImage();
 
 nextbutton.addEventListener('click', function() {
+    currentimageindex = (currentimageindex +1) % imgegallery.length;
+    updateImage();
+});
 
-currentimageindex = (currentimageindex +1) % imgegallery.length;
+prevButton.addEventListener('click', function() {
+currentimageindex = (currentimageindex - 1 + imgegallery.length) % imgegallery.length;
 updateImage(); 
 });
+ 
+
+
